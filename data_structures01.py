@@ -16,3 +16,32 @@ for fruit in fruits:
 
 for number in numbers:
     print(number)
+
+# insert (index , value)
+fruits = ["apple", "Orange"]
+fruits.insert(0, "Mango")
+print(fruits)
+
+
+#remove(value)
+fruits = ["apple", "Orange", "banana", "mango"]
+fruits.remove("apple")
+print(fruits)
+
+#pop(index)
+fruits = ["apple", "Orange", "banana", "mango"]
+fruits.pop(1)
+print(fruits)
+
+
+#sort()(choto theke boro)
+number = [20,19,18,17,16,15,14,13,12,11,10,9,8,7,1,2,5,3,4]
+number.sort()
+print(number)
+
+#reverse()(list ke ulto kore fela)
+numbers = [20,15,13,12,11]
+numbers.reverse()
+print(numbers)
+
+#
