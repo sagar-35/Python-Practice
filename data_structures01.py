@@ -44,4 +44,17 @@ numbers = [20,15,13,12,11]
 numbers.reverse()
 print(numbers)
 
-#
+
+#set(only for unique values)
+my_set = {"apple", "Orange", "banana", "mango","Orange", "Orange1"}
+my_set.add("Orange")
+print(my_set)
+
+#remove
+my_set.remove("Orange")
+print(my_set)
+
+#loop
+for my_set1 in my_set:
+    print(my_set1)
+
