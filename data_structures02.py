@@ -79,9 +79,9 @@ students["Tisha"] → 92
 def find_top_scorer():
     top_name = max(studnets, key=studnets.get)
     top_score = studnets[top_name]
-    return f"Top Scorer is {top_name} with {top_score} marks!"
-
+    return f"Top socrer is {top_name} with {top_score}marks"
 print(find_top_scorer())
+"\n"
 '''
 🔍 এই লাইনে আমরা একটা formatted string রিটার্ন করছি।
 ➡ Output হবে যেমন: "Top scorer is Tisha with 92 marks."
@@ -92,15 +92,45 @@ print(find_top_scorer())
 
 studnets={}
 
-for i in range (3):
-    name = input(f"Enter Students Name {i+1}: ")
-    marks= int(input("Enter Students marks : "))
+for i in range(3):
+    name = input(f"Enter Students name {i+1}: ")
+    marks = int(input("Enter his/her Marks: "))
     studnets[name] = marks #We are storing the name as the key and the mark as the value into the dictionary.
 
 def find_top_scorer():
     top_name = max(studnets, key=studnets.get)
     top_score = studnets[top_name]
-    return f"Top scorer is {top_name} with {top_score} mark"
+    return f"Top scorer is {top_name} with {top_score} mark\n"
 
 print(find_top_scorer())
+
+
+#Practice 05:
+
+# একটা dictionary যেখানে নাম key আর নাম্বার value
+students1 = {
+    "Sagar": 92,
+    "Rafi": 85,
+    "Amena": 78,
+    "Ritu": 88
+}
+
+#সব student's নাম প্রিন্ট করো
+print("All Students Name: ")
+for name in students1:
+    print(name)
+
+#সব student's নাম্বার প্রিন্ট করো
+print("\nAll Students Marks: ")
+for marks in students1.values():
+    print(marks)
+
+#নাম ও নাম্বার একসাথে দেখাও
+print("\nAll Students Name & Marks: \n")
+for name, marks in students1.items():
+    print(f"{name} got {marks} marks")
+
+#কোনো একজন student এর নাম্বার দেখাও
+print(f"\nSagar's mark is", students1["Sagar"])
+
 
