@@ -11,12 +11,12 @@ score = 0
 
 for question, correct_answer in quiz.items():
     print(question)
-    user_answer = input("Your answer: ")
+    user_aswer = input("Write your answer: ")
 
-    if user_answer.strip().lower() == correct_answer.lower():
+    if user_aswer.strip().lower() == correct_answer.lower():
         print("Correct!\n")
         score += 1
+
     else:
         print(f"Wrong! Correct Answer is {correct_answer}\n")
-
-print(f"Your Score is {score}/{len(quiz)}")
+print(f"Your total score is {score}/{len(quiz)}")
