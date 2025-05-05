@@ -121,7 +121,7 @@ for name in students1:
     print(name)
 
 #সব student's নাম্বার প্রিন্ট করো
-print("\nAll Students Marks: ")
+print("\nAll Students mark: ")
 for marks in students1.values():
     print(marks)
 
@@ -133,4 +133,24 @@ for name, marks in students1.items():
 #কোনো একজন student এর নাম্বার দেখাও
 print(f"\nSagar's mark is", students1["Sagar"])
 
+#🔧 Practice: Dictionary ➤ Add, Update, Delete
 
+students2 ={
+    "Sagar" : 90,
+    "Hasan" : 80,
+    "Omi"   : 79
+}
+students2["Ritu"] = 99
+print("After Adding Ritu", students2)
+
+students2["Omi"] = 80
+print("After update Omi's mark: ", students2)
+
+del students2["Hasan"]
+print("After Deleting Hasan: ", students2)
+
+if "Sagar" in students2:
+    print("Sagar is in the list")
+
+if "Hasan" not in students2:
+    print("Hasan isn't in list anymore")
