@@ -19,3 +19,14 @@ with open("dairy.txt", "r") as file:
     lines = file.readlines()
     for line in lines:
         print("@",line.strip())
+
+
+
+'''with open("file01.txt", "w") as file:
+    file.write("What's up?")
+print("File create done.")'''
+
+import os 
+os.remove("file01.txt")
+filename = "file01.txt"
+print(f"File Remove Done {filename}")
