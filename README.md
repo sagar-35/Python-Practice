@@ -8,7 +8,7 @@ This repository contains basic Python practice problems I worked on while learni
 - ✅ Prime Number Checker
 - ✅ Loop and Condition Practice
 - ✅ Functions and Lists
-- ✅ File Handling (coming soon)
+- ✅ File Handling
 - ✅ OOP Basics (coming soon)
 
 ## 🚀 Goal
