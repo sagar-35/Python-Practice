@@ -9,7 +9,7 @@ This repository contains basic Python practice problems I worked on while learni
 - ✅ Loop and Condition Practice
 - ✅ Functions and Lists
 - ✅ File Handling
-- ✅ OOP Basics (coming soon)
+- ✅ OOP Basics to Advanced
 
 ## 🚀 Goal
 
