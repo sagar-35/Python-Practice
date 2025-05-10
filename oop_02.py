@@ -34,3 +34,17 @@ s2.show_details()
 s2.add_subject("Physics")
 s2.change_name("Nila Haque")
 s2.show_details()
+
+
+class Book():
+    def __init__(self, title, author, price):
+        self.title = title
+        self.author = author
+        self.price = price
+
+b1 = Book("Python Shikhi", "Ahmedul Hoq", 500)
+
+print("Book Title: ", b1.title)
+print("Author Name: ", b1.author)
+print("Price: ", b1.price)
+    
