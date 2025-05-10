@@ -49,8 +49,18 @@ class Student:
 m1 = Student("Hasan", 22, ["Python", "Math", "English"])
 m1.show_details()
 
-        
 
+#auto __init__() how __init__ method works
+        
+class Example:
+    def __init__(self):
+        print("init cholteche")
+    
+    def hello(self):
+        print("ami hello method")
+
+obj = Example()
+obj.hello()
         
 
 
