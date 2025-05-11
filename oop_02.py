@@ -47,5 +47,24 @@ b1 = Book("Software QA Automation", "Ahmedul Hoq", 350)
 print(b1.title)
 print(b1.author)
 print(b1.price)
+print(b1)
+
+#__str__() functions practice 
+class Book1:
+    def __init__(self, title, author, price):
+        self.title = title
+        self.author = author
+        self.price = price
+
+    def __str__(self):
+        return f"Title: {self.title} | Author: {self.author} | Price: {self.price}"
+
+d1 = Book1("Selenium WebDriver", "Sagar Hoq", 500)
+
+print(d1.author)
+print(d1.title)
+print(d1)
+        
+        
         
     
