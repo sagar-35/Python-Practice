@@ -86,7 +86,23 @@ g1 = Grade("Sagar", 79) # অবজেক্ট তৈরি
 
 g1.show_grade() # মেথড কল করা
 
+# একটা Person নামের ক্লাস তৈরি করা হচ্ছে
+class Person:
 
-        
+    # constructor method: object বানানোর সময় name ও age সেট করে
+    def __init__(mysillyobj, name, age):
+        mysillyobj.name = name # object-এর name property সেট করা
+        mysillyobj.age = age # object-এর age property সেট করা
+
+    # একটা method যেটা object-এর তথ্য প্রিন্ট করে
+    def show_info(mysillyobj):
+        print("Name:",mysillyobj.name)    # object-এর name প্রিন্ট করে
+        print("Age :",mysillyobj.age)# object-এর age প্রিন্ট করে
+
+# Person ক্লাস থেকে p1 নামে একটা object বানানো হচ্ছে, name = "Sagar", age = 24
+p1 = Person("Sagar", 24)
+
+# object-এর show_info() মেথড কল করা হচ্ছে — name ও age প্রিন্ট করবে
+p1.show_info()
         
     
