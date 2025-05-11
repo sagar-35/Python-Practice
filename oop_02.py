@@ -47,7 +47,7 @@ b1 = Book("Software QA Automation", "Ahmedul Hoq", 350)
 print(b1.title)
 print(b1.author)
 print(b1.price)
-print(b1)
+print(b1) #output will be (<__main__.Book object at 0x00000226191B38C0>)
 
 #__str__() functions practice 
 class Book1:
@@ -64,7 +64,29 @@ d1 = Book1("Selenium WebDriver", "Sagar Hoq", 500)
 print(d1.author)
 print(d1.title)
 print(d1)
-        
+
+
+#Methods Objects
+class Grade:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+    def show_grade(self):
+        if self.marks >= 80:
+            grade = "A+"
+        elif self.marks >=70:
+            grade = "A"
+        elif self.marks >= 50:
+            grade = "B"
+        else:
+            grade = "F"
+        print(f"{self.name}'s grade is {grade}")
+
+g1 = Grade("Sagar", 79) # অবজেক্ট তৈরি
+
+g1.show_grade() # মেথড কল করা
+
+
         
         
     
