@@ -101,8 +101,13 @@ class Person:
 
 # Person ক্লাস থেকে p1 নামে একটা object বানানো হচ্ছে, name = "Sagar", age = 24
 p1 = Person("Sagar", 24)
-
+p1.age = 22 # Modify Object Properties
+# del p1.age # Delete Object Properties
+# del p1 # Delete Object
 # object-এর show_info() মেথড কল করা হচ্ছে — name ও age প্রিন্ট করবে
 p1.show_info()
-        
-    
+
+
+# Another Practice    
+class man: #class definitions cannot be empty, but if you for some reason have a class definition with no content, put in the pass statement to avoid getting an error.
+    pass
