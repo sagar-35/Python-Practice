@@ -1,15 +1,18 @@
-class Car: #class   
-    def __init__(self, brand, model, year): #constructor method
-        self.brand = brand # attributes declear
-        self.model = model
-        self.year = year
+class Circle:
+
+    def __init__(self, radius):
+        self.radius = radius
     
-    def start_engine(self): # method 
-        print(f"{self.brand} {self.model} engine started.")
+    def area(self):
+        pi = 3.1416
+        return pi * self.radius ** 2
+    
+    def perimeter(self):
+        pi = 3.1416
+        return 2 * pi * self.radius
 
-car1 = Car("Honda", "Civic", 2022)
-car2 = Car("BMW", "M6", 2019)
+c1 = Circle(7)
 
-car1.start_engine()
-
+print(f"Area: {c1.area()}")
+print(f"Perimete: {c1.perimeter()}")
         
