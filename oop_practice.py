@@ -1,18 +1,19 @@
-class Circle:
-
-    def __init__(self, radius):
-        self.radius = radius
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
     
     def area(self):
-        pi = 3.1416
-        return pi * self.radius ** 2
+        return self.length * self.width
     
-    def perimeter(self):
-        pi = 3.1416
-        return 2 * pi * self.radius
-
-c1 = Circle(7)
-
-print(f"Area: {c1.area()}")
-print(f"Perimete: {c1.perimeter()}")
+    def is_squre(self):
+        return self.length == self.width
         
+r1 = Rectangle(2, 30)
+
+print(f"Area: {r1.area()}")
+
+if r1.is_squre:
+    print("It's squre.")
+else:
+    print("It's rectangle, Not squre.")
