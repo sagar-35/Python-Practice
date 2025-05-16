@@ -1,19 +1,14 @@
-class Rectangle:
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
+class Temperature:
+    def __init__(self, celsius):
+        self.celsius = celsius
     
-    def area(self):
-        return self.length * self.width
+    def to_fahrenheit(self):
+        return self.celsius * 9/5 + 32
     
-    def is_squre(self):
-        return self.length == self.width
+    def to_kelvin(self):
+        return self.celsius + 273.15
+
+t1 = Temperature(35)
+print(f"F = {t1.to_fahrenheit()}")
+print(f"K = {t1.to_kelvin()}")
         
-r1 = Rectangle(2, 30)
-
-print(f"Area: {r1.area()}")
-
-if r1.is_squre:
-    print("It's squre.")
-else:
-    print("It's rectangle, Not squre.")
