@@ -7,8 +7,10 @@ class Temperature:
     
     def to_kelvin(self):
         return self.celsius + 273.15
+    
+    def show_result(self):
+        print(f"Celsius to Farhenheit: {self.to_fahrenheit()}")
+        print(f"Celsius to Kelvin: {self.to_kelvin()}")
 
 t1 = Temperature(35)
-print(f"F = {t1.to_fahrenheit()}")
-print(f"K = {t1.to_kelvin()}")
-        
+t1.show_result()
