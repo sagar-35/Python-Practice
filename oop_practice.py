@@ -1,16 +1,18 @@
-class Temperature:
-    def __init__(self, celsius):
-        self.celsius = celsius
+class Employee:
+    def __init__(self, name, basic_salary):
+        self.name = name 
+        self.basic_salary = basic_salary
     
-    def to_fahrenheit(self):
-        return self.celsius * 9/5 + 32
+    def calculate_salary(self):
+        bonus = self.basic_salary * 0.20 #20% of Basic Salary
+        total = self.basic_salary + bonus
+        return total
     
-    def to_kelvin(self):
-        return self.celsius + 273.15
-    
-    def show_result(self):
-        print(f"Celsius to Farhenheit: {self.to_fahrenheit()}")
-        print(f"Celsius to Kelvin: {self.to_kelvin()}")
+    def show_info(self):
+        print(f"Name: {self.name}")
+        print(f"Basic Salary: {self.basic_salary}")
+        print(f"Salary wiht 20% Bonus: {self.calculate_salary()}")
 
-t1 = Temperature(35)
-t1.show_result()
+salary = Employee("Ahmedul Hoq", 50000)
+salary.show_info()
+        
