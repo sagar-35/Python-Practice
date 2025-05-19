@@ -1,22 +1,22 @@
-class Vehicle:
-    def __init__(self, brand, year): #attributes
-        self.brand = brand
-        self.year = year
-
-    def show_info(self):
-        print(f"{self.brand} {self.year} engine is ok.")
-
-class Car(Vehicle): #child class
-    def __init__(self, brand, year, model):
-        super().__init__(brand, year)
-        self.model = model
+# Doctor Class Inheritance
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
     
-    def drive(self):
-        print(f"The {self.brand} {self.model} is now driving.")
+    def show_info(self):
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
 
-car1 = Car("BMW", 2022, "I8")
+class Doctor(Person):
+    def __init__(self, name, age, specialty):
+        super().__init__(name, age)
+        self.specialty = specialty
+    
+    def diagnose(self):
+        print(f"Dr. {self.name} is diagnosing a patient as a {self.specialty}")
 
-car1.show_info()
-print(f"Model: {car1.model}")
-car1.drive()
-            
+dr1 = Doctor("Sagar Hoq", 24, "Dentist")
+dr1.show_info()
+print(f"Specialty: {dr1.specialty}")
+dr1.diagnose()
