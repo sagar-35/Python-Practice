@@ -1,16 +1,17 @@
-class EvenNumbers:
+class MyNumbers:
     def __iter__(self):
-        self.num = 2
+        self.a = 1
         return self
     
     def __next__(self):
-        if self.num <= 20:
-            current = self.num
-            self.num += 2
-            return current
-        else:
-            raise StopIteration
+        x = self.a 
+        self.a += 1
+        return x
+    
+obj = MyNumbers()
+myIter = iter(obj)
 
-evens = EvenNumbers()
-for number in evens:
-    print(number)
+print(next(obj))
+print(next(obj))
+print(next(obj))
+print(next(obj))
