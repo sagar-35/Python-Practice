@@ -1,16 +1,16 @@
-class MyNumber:
+class MyNumbers: 
     def __iter__(self):
-        self.num = 1
+        self.x = 1
         return self
-
+    
     def __next__(self):
-        if self.num <= 5: # stop condition
-            x = self.num
-            self.num += 1
-            return x
+        if self.x <= 5:
+            i = self.x
+            self.x += 1
+            return i
         else:
-            raise StopIteration # stop here
-        
-obj = MyNumber()
-for number in obj:
+            raise StopIteration
+
+num = MyNumbers()
+for number in num:
     print(number)
