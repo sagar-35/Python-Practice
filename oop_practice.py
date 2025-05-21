@@ -12,5 +12,6 @@ class MyNumbers:
             raise StopIteration
 
 num = MyNumbers()
-for number in num:
-    print(number)
+numIter = iter(num)
+for i in numIter:
+    print(i)
