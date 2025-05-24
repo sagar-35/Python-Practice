@@ -1,23 +1,29 @@
-#animal sound generator & print a list of animals sound using a loop
+#Employee Salary System(Abstract Class)
 from abc import ABC, abstractmethod
 
-class Animal(ABC):
+class Employee(ABC):
     @abstractmethod
-    def make_sound(self):
+    def callculate_salary(self):
         pass
 
-class Cow(Animal):
-    def make_sound(self):
-        return "Cow Sound: Moo!"
+class FullTimeEmployee(Employee):
+    def __init__(self):
+        self.salary = 50000
 
-class Duck(Animal):
-    def make_sound(self):
-        return "Duck Sound: Pek Pek."
+    def callculate_salary(self):
+        return self.salary 
     
-class Lion(Animal):
-    def make_sound(self):
-        return "Lion sound: Halom!"
+class PartTimeEmployee(Employee):
+    def __init__(self, hourly_rate, hours):
+        self.hourly_rate = hourly_rate
+        self.hours = hours
 
-animal1 = [Cow (), Duck (), Lion()]
-for animal in animal1:
-    print(animal.make_sound())
+    def callculate_salary(self):
+        return self.hourly_rate * self.hours
+
+#object creating
+fulltime = FullTimeEmployee()
+parttime = PartTimeEmployee(15, 8)
+
+print(f"Full time salary: {fulltime.callculate_salary()}")
+print(f"Part-Time Salary: {parttime.callculate_salary()} Per Day")
