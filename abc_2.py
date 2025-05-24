@@ -1,20 +1,23 @@
+#animal sound generator & print a list of animals sound using a loop
 from abc import ABC, abstractmethod
 
-class Payment(ABC):
+class Animal(ABC):
     @abstractmethod
-    def make_payment(self, amount):
-        self.amount = amount
-    
-class CreditCardPayment(Payment):
-    def make_payment(self, amount):
-        print(f"Paid ${amount} using Credit Card.")
-    
-class PaypalPayment(Payment):
-    def make_payment(self, amount):
-        print(f"Paid ${amount} using Paypal Account.")
+    def make_sound(self):
+        pass
 
-payment1 = CreditCardPayment()
-payment1.make_payment(1000)
+class Cow(Animal):
+    def make_sound(self):
+        return "Cow Sound: Moo!"
 
-payment2 = PaypalPayment()
-payment2.make_payment(500)
+class Duck(Animal):
+    def make_sound(self):
+        return "Duck Sound: Pek Pek."
+    
+class Lion(Animal):
+    def make_sound(self):
+        return "Lion sound: Halom!"
+
+animal1 = [Cow (), Duck (), Lion()]
+for animal in animal1:
+    print(animal.make_sound())
