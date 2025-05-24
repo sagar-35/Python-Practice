@@ -1,27 +1,11 @@
 class Vehicle:
-    def __init__(self, brand, model):
-        self.brand = brand
-        self.model = model
-    
     def move(self):
-        print("Move!!")
+        print("Vehicle is moving")
 
-class Car(Vehicle):
-    pass
-
-class Boat(Vehicle):
+class Bike(Vehicle):
     def move(self):
-        print("Sail!!")
+        print("Riding!")
 
-class Plane(Vehicle):
-    def move(self):
-        print("Fly!!")
-    
-car1 = Car("BMW", "M5")
-boat1 = Boat("Ibiza", "Touring 20")
-plane1 = Plane("Boeing", "747")
-
-for x in (car1, boat1, plane1):
-    x.move()
-    print(x.brand)
-    print(x.model)
+bike1 = Bike()
+bike1.move()
+        
