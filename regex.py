@@ -1,5 +1,5 @@
 import re
-# Find All Words starting with capital letter
-txt = "Alice and Bob are going to New York in December."
-x = re.findall(r"\b[A-Z][a-z]+", txt)
-print(x)
+# Find All Emails
+txt = "Please contact us at support@example.com or salse@company.org"
+x = re.findall(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", txt)
+print(x) 
