@@ -1,10 +1,6 @@
 import re
-#check if the string starts with "The" and ends with "Spain":
+# Find All Digits
+txt = "Order 1: 5 apples, Order 2: 10 bananas, Order 3: 15 mangoes"
 
-txt = "The rain in Spain"
-x = re.search("^The.*Spain$", txt)
-
-if x:
-    print("Yes!, We have match!")
-else:
-    print("No Match")
+x = re.findall(r"\d+", txt)
+print(x)
