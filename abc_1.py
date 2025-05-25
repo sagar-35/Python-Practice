@@ -1,30 +1,26 @@
+#Vehicle Speed Controller(abstraction)
 from abc import ABC, abstractmethod
-#abstract class
-class Shape(ABC):
+
+class Vehicle(ABC):
     @abstractmethod
-    def area(self):
+    def get_max_speed(self):
         pass
 
-class Rectangle(Shape):
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
-    
-    def area(self):
-        return self.width * self.height
+class Car(Vehicle):
+    def get_max_speed(self):
+        return 180
 
-class Circle(Shape):
-    def __init__(self, radius):
-        self.radius = radius
-    
-    def area(self):
-        return 3.1416 * self.radius * self.radius
+class Bike(Vehicle):
+    def get_max_speed(self):
+        return 120
 
-#object creating and testing
+class Truck(Vehicle):
+    def get_max_speed(self):
+        return 80
 
-r = Rectangle(5, 10)
-c = Circle(7)
+vehicles = [Car(), Bike(), Truck()]
 
-print("Rectangle Area: ", r.area())
-print("Circle Area: ", c.area())
+for vehicle in vehicles:
+    print(f"{vehicle.__class__.__name__} max speed: {vehicle.get_max_speed()}")
+
         
