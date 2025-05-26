@@ -1,8 +1,4 @@
-import camelcase
-
-c = camelcase.CamelCase()
-
-txt = "hello world! how are you?"
-
-print(c.hump(txt))
-#This method capitalizes the first letter of each word.
+import cowsay 
+cowsay.cow("Hi! How are you?")
+cowsay.dragon("I am a dragon!")
+cowsay.tux("Hello from linux penguin")
