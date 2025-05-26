@@ -1,15 +1,17 @@
 import re 
-# Bangladeshi Phone Number finding with regex
+# Practice Extract All Valid Dates
 txt = """
-Call me at 01712345678 or +8801812345678.
-Office: 8801912345678. Wrong number: 123456.
-Another: 01911-234567 or +880-1934-567890
+My birthday is 21-03-2000. His birthday is 01/04/1998.
+Invalid date: 99-99-9999. We met on 5-6-2023 and again on 07/07/2021.
+Another event: 29-02-2024.
 """
-# regex pattern to match Bangladeshi phone numbers
-pattern = r"(?:\+880-?|880-?|0)?1[3-9][0-9]{2}-?[0-9]{6}"
+# Regex pattern to match dates (DD-MM-YYYY or DD/MM/YYYY or single digit too)
+pattern = r"\b\d{1,2}[-/]\d{1,2}[-/]\d{4}\b"
 
+#Find All Matches
 matches = re.findall(pattern, txt)
 
-print("Valid phone numbers found: ")
-for num in matches:
-    print(num)
+# Print results
+print("Valid dates found: ")
+for date in matches:
+    print(date)
